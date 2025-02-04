@@ -24,8 +24,6 @@ You'll only need the Bash shell:
 * Start by opening [exercise 1](./exercises/exercise-1.md/).
 * Remember to ask an instructor if you're stuck.
 
-> :exclamation: Hottest tip: Google is your friend. You will need to google a lot as you dive into the exercises!
-
 ## Exercises
 
 - [Exercise 1](./exercises/exercise-1.md/) - Getting started
