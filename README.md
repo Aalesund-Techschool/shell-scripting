@@ -30,32 +30,42 @@ You'll only need the Bash shell:
 
 - [Exercise 1](./exercises/exercise-1.md/) - Getting started
 - [Exercise 2](./exercises/exercise-2.md/) - Basics of the shell
-- [Exercise 2](./exercises/exercise-3.md/) - Scripting
+- [Exercise 3](./exercises/exercise-3.md/) - Scripting
 - [Exercise 4](./exercises/exercise-4.md/) - Using pipelines and redirects
 - [Exercise 5](./exercises/exercise-5.md/) - Number guessing game
+- [Bonus exercise](./exercises/exercise-bonus.md/) - Bonus exercise(s)
 
+## Solutions
+If you get stuck or need hints, you can find the solutions in the [solutions](./solutions/) folder.
+
+## Symbols and icons you will see in the exercises
+### Icons with special meaning
+?? An exercise you need to complete
+?? Extra information or tips. You don't need to do anything, but take the information with you.
+?? Bad practice, often an unfortunate way to solve a problem.
+? A bonus exercise
+### Keyboard shortcuts
+Tips on shortcuts you can take by using keyboard combinations look like this:
+
+CTRL + ALT + C
+
+### Diff blocks
+A diff-block will show if there is text that should be added or removed (- removed, + added)
+
+- this text was removed
++ and replaced with this text
 
 ## Helpful resources
 
-- [Shell scripting](#shell-scripting)
-  - [Open presentation slides](#open-presentation-slides)
-  - [What you need](#what-you-need)
-  - [How to get started](#how-to-get-started)
-  - [Exercises](#exercises)
-  - [Helpful resources](#helpful-resources)
-  - [1. Navigation](#1-navigation)
-  - [2. Getting an overview](#2-getting-an-overview)
-  - [3. Files and directories](#3-files-and-directories)
-  - [4. Scripting basics](#4-scripting-basics)
-  - [5. How do I get help?](#5-how-do-i-get-help)
+See command line cheat sheet 
 
-## 1. Navigation
+### 1. Navigation commands
 - `ls`: what's in this directory? ("list")
 - `pwd` : where am I standing in the file system? ("print working directory")
 - `cd` : take me to indicated directory ("change directory")
 - `find` : find a file from given directory in the file tree
 
-## 2. Getting an overview
+### 2. Getting an overview
 
 - `history` : show me the commands I've run
 - `tail`  : read me the last lines of a file
@@ -64,7 +74,7 @@ You'll only need the Bash shell:
 - `cat` : list contents of a file to standard out
 - `grep` : search for a string of characters in a file using given regular expression
 
-## 3. Files and directories
+### 3. Files and directories
 
 - `mkdir` : make a directory ("make dir")
 - `cp` : copy a file or directory ("copy")
@@ -73,16 +83,18 @@ You'll only need the Bash shell:
 - `chmod` : change file permissions ("change mode")
 - `touch` : change last-modified timestamp of a file without editing it
 
-## 4. Scripting basics
+### 4. Scripting basics
 
 - `echo` : print to screen (think `System.out.println`)
 - `|` : send the output (pipe the output) to the next command
 - `>` and `<` : redirecting input and output streams
-- `for`
-- `if`
-- variables
+- `for` - loop through a list of items
+- `if` - conditional statements
+- `var=value` - assign a value to a variable
 
-## 5. How do I get help? 
+### 5. How do I get help? 
 
+- Ask the instructors
+- Ask an AI-assistant like ChatGPT. For example ["How do I list all .txt files with bash?"](https://chatgpt.com/share/67a20af4-f21c-800b-943e-609418eee6cf)
 - Google is, as always, your friend
-- `man <command>` 
+- `man <command>` - run the `man` command to get help for a command. For example `man ls` will show you the help for the `ls` command.
