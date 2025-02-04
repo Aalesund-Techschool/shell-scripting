@@ -82,7 +82,7 @@ echo "$MESSAGE"
 
 :pencil2: Try executing your `helloworld.sh` script this way.
 
-:book: The command should output an error. 
+:book: The command should output an error.
 
 ```bash
 bash: ./helloworld.sh: Permission denied
@@ -114,22 +114,210 @@ bash: ./helloworld.sh: Permission denied
 Hello World!
 ```
 
-### 3.4 - Create bash scripts
+### 3.4 Accessing command-line arguments
 
-TODO - intro about for-loops here
+TODO - write a short tutorial
 
-TODO - exercise with a simple for-loop
+:pencil2: Write a bash script which takes one command line argument and prints the following output: `You have passed <argument> as an argument.`. Save the script as `args.sh`, set execution permissions for it. Now run `./args.sh Chuck`. You should see output `You have passed Chuck as an argument.`
 
-TODO - intro about if-statements here
+### 3.5 - Create bash scripts
+
+Scripts are simply a list of commands. However, these commands can include some logic as well. Let's look at two possible logic constructions: for-loops and if-statements.
+
+#### 3.5.2 For-loops
+
+If you are familiar with programming, you have seen for-loops. Essentially, a loop is a construct which repeats a piece of code several times. In Bash, the syntax of a for-loop is as follows:
+
+```bash
+for <variable> in <list>
+do
+  # Some code here - this will be repeated
+done
+```
+
+The `list` is a list of values. In the simplest case, it can be a space-separated value list, such as `1 2 3 4` or `green yellow red banana`.
+
+For example:
+
+```bash
+for i in 1 2 3 4
+do
+  echo "i is $i"
+done
+```
+
+This will print the following output:
+
+```
+i is 1
+i is 2
+i is 3
+i is 4
+```
+
+You can mix values of different types as well:
+
+```bash
+for i in 1 2 green yellow -3
+do
+  echo "i is $i"
+done
+```
+
+:exclamation: Note that `i` is written simply as `i` in the `for i in ...`, because here you assign value to variable `i`, while in the `echo` command it is written as `$i`, because you read the value of variable `i`.
+
+The `<list>` can be output of another command also. In that case you need to enclose the command in `$()`. Example, to iterate over all the names of files inside the local directory
+
+```bash
+for filename in $(ls)
+do
+  echo $filename
+done
+```
+
+The `seq` command generates a sequence of values. For example, `seq 1 4` generates values `1 2 3 4`; `seq 2 14 4` generates values from 2 to 14 with step 4, i.e., `2 6 19 14`.
+
+:pencil2: What do you think will be printed to the terminal by this script?
+
+```bash
+#!/bin/bash
+for i in  $(seq 2 3 9)
+do
+  echo "i is $i"
+done
+```
+
+:bulb: Curios to find out? Copy the content of this script, save it as a file, give it execution permissions and run it!
+
+You can nest for loops inside each other, for example:
+
+```bash
+for i in  $(seq 1 4)
+do
+  for j in $(seq 1 $i)
+  do
+    echo "$i $j"
+  done
+done
+```
+
+:pencil2: What will this script print out?
+
+There are different ways you can write for-loops in bash. Some syntax variants are added in later versions of bash and will not work on macOS by default (unless you update bash). Check out different examples in [this article](https://www.cyberciti.biz/faq/bash-for-loop/).
+
+:pencil2: Create a bash script with a for loop which prints the following:
+
+```
+red
+green
+blue
+```
+
+:pencil2: Create a bash script with a for loop which prints the following:
+
+```
+The number is 2
+The number is 3
+The number is 4
+The number is 5
+The number is 6
+```
+
+:pencil2: Create a bash script with a for loop and a `seq` command which prints the following:
+
+```
+The number is 2
+The number is 4
+The number is 6
+The number is 8
+The number is 10
+```
+
+#### 3.5.3 If-statements
+
+Sometimes you want to have branching in your script - if a condition is true, do one thing, otherwise do something else. The general syntax for if-statements in bash:
+
+```bash
+if [ condition ]; then
+   # commands to execute when condition is true
+else
+   # commands to execute when condition is false
+fi
+```
+
+The else part is optional, this also works:
+
+```bash
+if [ condition ]; then
+   # commands to execute when condition is true
+fi
+```
+
+You can combine several conditions with else-if blocks as follows:
+
+```bash
+if [ condition1 ]; then
+   # commands to execute when condition1 is true
+elif [condition2 ]; then
+   # commands to execute when condition2 is true
+elif [condition3 ]; then
+   # commands to execute when condition3 is true
+   # ... and so on
+else
+   # commands to execute when none of the conditions above are true
+fi
+```
+
+As always, the devil is in the details. Here the devil is the specific syntax of conditions. Depending on the bash version, different condition syntax is possible. Examples:
+
+```bash
+num=10
+
+num=0
+
+if [ "$num" -gt 0 ]; then
+    echo "Positive"
+elif [ "$num" -lt 0 ]; then
+    echo "Negative"
+else
+    echo "Zero"
+fi
+
+s="hello"
+
+if [ "$s" = "hello" ]; then
+    echo "String matches"
+fi
+
+file="data.txt"
+# file=/home/users/girts
+
+if [ -d "$file" ]; then
+    echo "$file exists and is a directory"
+elif [ -f "$file" ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+
+if [ -f "$file" ] && [ -w "$file" ]; then
+    echo "File is writable"
+else
+    echo "File is missing or not writable"
+fi
+```
+
+:pencil2: Create a bash script
 
 TODO - exercise with an if-statement
+
+:pencil2: Modify the `args.sh` script you created before. If the first argument for the command is `Chuck`, print `There are no arguments with Chuck` instead of the default message.
 
 TODO - exercise with a for loop and if statement
 
 TODO - explain how to read command-line arguments
 
 TODO - exercise with command line arguments
-
 
 :book: These tasks require you to create bash scripts that you can execute in your shell. Remember to set the correct file permissions on each script file you create.
 
@@ -144,7 +332,7 @@ Make a test that checks whether the path is a directory or a regular file. Print
 
 ---
 
-### 3.5 - Adding scripts to the $PATH
+### 3.6 - Adding scripts to the $PATH
 
 :book: If you create a script you want to use without executing it from the directory it is located in, you can add the script directory to the `$PATH` variable. Like we discussed in the previous exercise, the `$PATH` is set at startup and can be overridden using a `.bashrc` configuration file in the home directory.
 
