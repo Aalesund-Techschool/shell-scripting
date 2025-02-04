@@ -8,12 +8,12 @@ You will learn to:
 - Install required software (if needed)
 - Open a terminal
 
+Note: we start with a bit of theory and history. If you are already familiar with the topics, you can skip to [Section 1.2](#12---installing-the-required-software).
+
 ## Required software and tools for this exercise
 
 - Bash
 - A terminal
-
----
 
 ## 1.1 - Terminals, consoles and shells
 
@@ -121,7 +121,7 @@ Examples of some shells:
 
 :pencil2: (Optional) If you are on Windows 10 or earlier, follow [the official install instructions](https://docs.microsoft.com/en-us/windows/terminal/install) to install Windows Terminal.
 
-:bulb: __Tip for experienced users:__ If you want a real, proper Linux environment in Windows, you can install [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/), or WSL. Note that this is out of scope for this workshop, as the install process is much more comprehensive than just installing an application. If you decide to install WSL, the install time is usually around 10 minutes (depending on Internet speeds and your computer). Windows Terminal is recommended in combination with WSL. :warning: Be warned if you have any problems installing or setting up WSL, you are on your own. :warning:
+:bulb: __Tip for experienced users:__ If you want a real, proper Linux environment in Windows, you can install [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/), or WSL. Note that this is out of scope for this workshop, as the install process is much more comprehensive than just installing an application. If you decide to install WSL, the install time is usually around 10 minutes (depending on Internet speeds and your computer). Windows Terminal is recommended in combination with WSL.
 
 ---
 
@@ -157,7 +157,7 @@ Google is your friend :)
 
 ### 1.3.2 - Mac-users
 
-:pencil2: Follow the [offical guide from Apple](https://support.apple.com/no-no/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) on how open the Terminal app included in macOS.
+You can find the Terminal app in the Applications > Utilities folder or by searching for "Terminal" in the Spotlight search.
 
 ### 1.3.3 - Windows-users
 
@@ -179,9 +179,14 @@ The result should be something like this:
 
 <img src="images/git-bash-windows-terminal.png" width="600">
 
-:exclamation: Not seeing Git Bash in the list? Following [this guide](https://www.timschaeps.be/post/adding-git-bash-to-windows-terminal/) to add Git Bash to Windows Terminal.
+:exclamation: Not seeing Git Bash in the list? See the first ansver to [this StackOverflow question](https://stackoverflow.com/questions/56839307/adding-git-bash-to-the-new-windows-terminal) to add Git Bash to Windows Terminal.
 
----
+
+## Check the result
+:pencil2: If you have successfully installed Bash on your computer, open it, type the following command:
+`echo "Hello, Bash!"`
+
+After pressint <kbd>Enter</kbd> you should see the `Hello, Bash!` message displayed in the next line of the terminal. If that works - congrats, you are done with Exercise 1! If it did not work, go back and troubleshoot.
 
 ## Summary
 
