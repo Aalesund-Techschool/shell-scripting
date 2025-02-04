@@ -33,9 +33,9 @@ You will learn to:
 
 :pencil2: To print the current working directory (which should be your home folder), use the `pwd` command.
 
-:pencil2: Create a subfolder of your home directory called `nerdschool-shellscripting` by using the `mkdir` command.
+:pencil2: Create a subfolder of your home directory called `techschool-shellscripting` by using the `mkdir` command.
 
-:pencil2: Change the working directory to this folder using the `cd` command. `pwd` should now output `<homefolder>/nerdschool-shellscripting`.
+:pencil2: Change the working directory to this folder using the `cd` command. `pwd` should now output `<homefolder>/techschool-shellscripting`.
 
 :pencil2: To open this folder as your workspace folder inside VS Code, you can launch VS Code from the command line using the `code .` command.
 
@@ -139,7 +139,7 @@ Make a test that checks whether the path is a directory or a regular file. Print
 :pencil2: Open the `.bashrc` file in VS Code using the `code` command and add the following:
 
 ```bash
-export PATH=~/nerdschool-shellscripting:$PATH
+export PATH=~/techschool-shellscripting:$PATH
 ```
 
 Notice that we use `export` to create a environment variable.
@@ -152,6 +152,6 @@ Notice that we use `export` to create a environment variable.
 
 :pencil2: Try echoing out the value of `$PATH` to see if it includes the new directory we added.
 
-:pencil2: Try executing some of the scripts inside the `nerdschool-shellscripting` directory by typing `<scriptname.sh>` while the current directory is any other directory.
+:pencil2: Try executing some of the scripts inside the `techschool-shellscripting` directory by typing `<scriptname.sh>` while the current directory is any other directory.
 
 ### [Go to exercise 4 :arrow_right:](./exercise-4.md)
