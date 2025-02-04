@@ -40,20 +40,22 @@ If you get stuck or need hints, you can find the solutions in the [solutions](./
 
 ## Symbols and icons you will see in the exercises
 ### Icons with special meaning
-?? An exercise you need to complete
-?? Extra information or tips. You don't need to do anything, but take the information with you.
-?? Bad practice, often an unfortunate way to solve a problem.
-? A bonus exercise
-### Keyboard shortcuts
-Tips on shortcuts you can take by using keyboard combinations look like this:
+- :pencil2: An exercise you need to complete
+- :bulb: Extra information or tips. You don't need to do anything, but take the information with you.
+- :poop: Bad practice, often an unfortunate way to solve a problem.
+- :star: A bonus exercise
 
-CTRL + ALT + C
+### Keyboard shortcuts
+Tips on keyboard shortcuts look like this:
+<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>C</kbd>
 
 ### Diff blocks
 A diff-block will show if there is text that should be added or removed (- removed, + added)
 
+```diff
 - this text was removed
 + and replaced with this text
+```
 
 ## Helpful resources
 
