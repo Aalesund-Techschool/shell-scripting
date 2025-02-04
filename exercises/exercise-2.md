@@ -35,9 +35,7 @@ $ ls
 
 [Here](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf) is a list of standard commands.
 
-### 2.2.1 - Your first command
-
-:pencil2: Start by opening your terminal application.
+### 2.2.1 - Bash on macOS
 
 :exclamation: __macOS users__: The default shell in macOS Catalina and newer is set to `zsh` (not `bash`). There are several alternative solutions:
 
@@ -46,29 +44,12 @@ $ ls
 - You can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/). Use the `echo $SHELL` command to list what shell you currently are using.
 
 
+### 2.2.2 - Your first command
+:pencil2: Start by opening your terminal application.
+
 :pencil2: Try listing the contents of a folder using the `ls <foldername>` command.
 
-
-<!-- TODO: Move shell in shell stuff to bonus? -->
-:book: The shell in itself is also a command, like other commands :)
-
-:pencil2: Try starting a new shell process by typing `bash` and then pressing <kbd>Enter</kbd>:
-
-```bash
-$ bash
-...
-$
-```
-
-:book: Note that the result is a new command prompt for a new shell. This new shell is a child process of the first shell. To exit the child shell process and return to the first shell, use the `exit` command:
-
-```bash
-$ exit
-exit
-$
-```
-
-### 2.2.2 - General syntax for commands
+### 2.2.3 - General syntax for commands
 
 :book: All commands in Unix-like systems follow a basic syntax:
 
@@ -90,22 +71,65 @@ Parameters are always prefixed with a `-` (sometimes they have an alternative "l
 
 What parameters and arguments a command takes, and if they are mandatory or not depends on the command.
 
-:pencil2: The `ls` command has an optional parameter called `-l`, which changes the output of the command to a more detailed "long form". Try using this parameter to list out the contents of a directory.
+:pencil2: The `ls` command has an optional parameter called `-l`, which changes the output of the command to a more detailed "long form". Try using this parameter to list out the contents of the current directory.
 
 ## 2.3 - Files and directories
 
 These first tasks are all about getting comfortable in your terminal, and execute some common commands.
 
+Here and onwards we don't always give precise hints on which command to use. The idea is that:
+- The first time(s) when you need to do task X, you look up the necessary commands in cheat sheets, documentation, AI-assistants or Google
+- Gradually over time you remember the most used commands
+
+:bulb: Check out the [Posix (Unix) command cheat sheet](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf)
+
+:bulb: In this section the following commands may be useful:
+- `pwd`
+- `cd`
+- `ls`
+- `find`
+- `date`
+
 :pencil2: Print the path to the current working directory
 
-:pencil2: List the hidden files (if any) in a directory (hint: in unix, hidden files starts with dot (".ssh"))
+:pencil2: Print the current date and time
 
-:pencil2: Navigate to your local clone of this repository (hint: use the "code"-button in the GitHub-repository for this workshop, if you haven't already, to get the url)
+:star: Bonus challenge: print the date and time in the following format: yyyy-mm-dd hh:mm:ss, for example 2025-02-19 16:10:52.
+
+:pencil2: List the files in the current directory, in the long-listing format. The output should look something similar to this (not necessarily the files, but the properties for each file):
+```bash
+total 20
+drwxr-xr-x 1 gist 4096    0 Feb  4 13:20 exercises/
+drwxr-xr-x 1 gist 4096    0 Feb  4 13:20 files/
+-rw-r--r-- 1 gist 4096 4194 Feb  4 13:50 README.md
+drwxr-xr-x 1 gist 4096    0 Feb  4 13:20 solutions/
+
+```
+
+:pencil2: Navigate to your local clone of this repository. Hints:
+- :bulb: Use the "code"-button in the GitHub-repository for this workshop, if you haven't already, to clone the repository
+- How to find where the GIT directory is located in the file system? This depends on your operating system and where you saved the directory. Let's say you downloaded it as `shell-scripting` directory inside your user's Downloads folder. 
+  - On Windows, using Git Bash, this will be available under `/c/Users/<yourUsername>/Downloads/shell-scripting`
+  - On macOS, it will be under `/Users/<yourUsername>/Downloads/shell-scripting` (same as Windows, just without the `c/`)
+  - On Linux: `/home/<yourUsername>/Downloads/shell-scripting`
+- :bulb: Use the `cd` command to navigate to the neccesary directory. For example, `cd /c/Users/girts/Dowloads/shell-scripting`.
+
+
+:star: Bonus challenge: List the hidden files (if any) in a directory (:bulb: hint: in unix, hidden files starts with dot (".ssh")) If you are in the directory with the git repository of this workshop, you should see something similar to this:
+```bash
+./  ../  .git/  .gitignore  exercises/  files/  README.md  solutions/
+```
+
+:pencil2: Navigate to the `files` directory inside the GIT workshop directory.
 
 :pencil2: List all `.txt` files in the `files` directory with human-readable size references ordered
 by the last-modified date.
 
-Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` parameters.
+:pencil2: Navigate back to the root-directory of the GIT workshop directory.
+
+:bulb: Hint: See the help documentation for the `ls` command's `l`, `t`, `r`, and `h` parameters.
+
+:pencil2: Find out the meaning of `-R` option for the `ls` command. :bulb: Hint: many commands support `--help` parameter for a short documentation about the command. For example: `ls --help`
 
 :pencil2: Locate the file called iterm.png by using the `find` command.
 
@@ -135,7 +159,7 @@ KEY="Some other value"
 KEY=value1:value2
 ```
 
-:bulb: To define a new variable, try defining `TEST=123` (note: no spaces before or after `=`):
+:pencil2: To define a new variable, try defining `TEST=123` (note: no spaces before or after `=`):
 
 ```bash
 $ TEST=123
@@ -144,7 +168,7 @@ $
 
 Note that assiging a value to a variable will not generate any output.
 
-:bulb: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
+:pencil2: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
 
 ```bash
 $ echo $TEST
@@ -194,11 +218,11 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 :book: Most users are already familiar with the cut, copy and paste shortcuts, but here is a reminder anyway:
 
-| Command | Windows shortcut | Linux shortcut | macOS shortcut |
-|---------|---|---|---|
-| Cut     | <kbd>CTRL+X</kbd> | <kbd>CTRL+X</kbd> | <kbd>⌘+X</kbd> |
-| Copy    | <kbd>CTRL+C</kbd> | <kbd>CTRL+C</kbd> | <kbd>⌘+C</kbd> |
-| Paste   | <kbd>CTRL+V</kbd> | <kbd>CTRL+V</kbd> | <kbd>⌘+V</kbd> |
+| Command | Windows shortcut  | Linux shortcut    | macOS shortcut   |
+| ------- | ----------------- | ----------------- | ---------------- |
+| Cut     | <kbd>CTRL+X</kbd> | <kbd>CTRL+X</kbd> | <kbd>?+X</kbd> |
+| Copy    | <kbd>CTRL+C</kbd> | <kbd>CTRL+C</kbd> | <kbd>?+C</kbd> |
+| Paste   | <kbd>CTRL+V</kbd> | <kbd>CTRL+V</kbd> | <kbd>?+V</kbd> |
 
 :book: Depending on the OS and terminal settings, you may find that these shortcuts are not working as expected inside the terminal.
 
@@ -208,9 +232,7 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 #### Git Bash in Windows
 
-:book: If you use Git Bash in Windows and haven't installed Windows Terminal, you need to go in to the Options menu and select "Keys", then check the box for "CTRL+Shift+letter shortcuts".
-
-<img src="images/git-bash-clipboard.png" width="400">
+:book: If you use Git Bash in Windows and haven't installed Windows Terminal, you may need set up key shortcuts yourself. Right click on the window title, choose Settings > Actions - see whether Copy, Paste and Cut commands include ctrl+shift+ variants of the command. IF these are lacking, scroll to top and choose "+ Add New" and define the necessary shortcut.
 
 :book: You can now use <kbd>Ctrl+Shift+C</kbd> for copy and <kbd>Ctrl+Shift+V</kbd> for paste.
 
@@ -224,7 +246,7 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 ### Mac
 
-:book: If you are using Mac you can use the normal <kbd>⌘+C</kbd> and <kbd>⌘+V</kbd> shortcuts.
+:book: If you are using Mac you can use the normal <kbd>?+C</kbd> and <kbd>?+V</kbd> shortcuts.
 
 ## 2.6 - Basic command line navigation
 
@@ -236,8 +258,8 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 Go to the previous command in the command history using arrow up and down:
 
-- <kbd>↑</kbd>
-- <kbd>↓</kbd>
+- <kbd>?</kbd>
+- <kbd>?</kbd>
 
 ### Go to beginning / end
 
@@ -250,11 +272,15 @@ Quickly jump to the beginning or end of the text:
 
 For a little more fine-grained movement, you can jump backwards or forwards one word at a time:
 
-- <kbd>Alt + B</kbd> or <kbd>ALT + ←</kbd> - Go back one word
-- <kbd>Alt + F</kbd> or <kbd>ALT + →</kbd> - Go forward one word
+- <kbd>Alt + B</kbd> or <kbd>ALT + ?</kbd> - Go back one word
+- <kbd>Alt + F</kbd> or <kbd>ALT + ?</kbd> - Go forward one word
 
 
 ### Search command history
+
+:pencil2: Run `history` command. This lists all the commands you have executed before.
+
+:star: Bonus challenge: find out how you can clear the history.
 
 Search backwards through command history:
 
@@ -269,6 +295,8 @@ Search backwards through command history:
 To clear the screen without clearing the current command:
 
 - <kbd>CTRL+L</kbd>
+
+You can also clear the screen by running the `clear` command.
 
 ## 2.7 - Terminating processes
 
