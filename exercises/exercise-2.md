@@ -39,7 +39,12 @@ $ ls
 
 :pencil2: Start by opening your terminal application.
 
-:exclamation: __macOS Catalina users__: The default shell in macOS Catalina is set to `zsh` (not `bash`). This means that after you open Terminal, you will need to start bash by typing `bash` and then pressing <kbd>Enter</kbd>. Alternatively, you can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/). Use the `echo $SHELL` command to list what shell you currently are using.
+:exclamation: __macOS users__: The default shell in macOS Catalina and newer is set to `zsh` (not `bash`). There are several alternative solutions:
+
+- Simply use the built-in `zsh` shell, it should work fine in the most cases.
+- Inside `zsh` start bash by typing `bash` and then pressing <kbd>Enter</kbd>. The bash included in macOS by default is quite old. It should work fine for all the exercises. However, if you want to install a newer version of bash, use Homebrew. Here you should be careful though, you may brake some expectations for other apps on macOS. 
+- You can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/). Use the `echo $SHELL` command to list what shell you currently are using.
+
 
 :pencil2: Try listing the contents of a folder using the `ls <foldername>` command.
 
