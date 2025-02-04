@@ -188,7 +188,8 @@ The result should be something like this:
 
 After pressint <kbd>Enter</kbd> you should see the `Hello, Bash` message displayed in the next line of the terminal. If that works - congrats, you are done with Exercise 1! If it did not work, go back and troubleshoot.
 
-:bulb: Don't include the exclamation mark in the message, such as `echo "Hello, Bash!"`. The exclamation mark symbol `!` may be interpreted in a bit special way and you can get stuck! ;). If you absolutely want to print the exclamation mark, you need to prepend it with the escape symbol `\`, such as here: `echo "Hello, Bash\!"`.
+:bulb: Don't include the exclamation mark in the message, such as `echo "Hello, Bash!"`. The exclamation mark symbol `!` may be interpreted in a bit special way and you can get stuck! ;). If you experience getting stuck, you need to prepend it with the escape symbol `\`, such as here: `echo "Hello, Bash\!"`. This is an example that you need to be careful when working with command line: _holde tunga rett i munnen_. ;)
+
 
 ## Summary
 
