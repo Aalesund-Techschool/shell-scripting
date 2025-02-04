@@ -18,7 +18,10 @@ You will learn to:
 
 :book: We are going to be using [Visual Studio Code](https://code.visualstudio.com/) to create and edit script files.
 
+Note: You can use any text editor of your choice. VSCode is a simple alternative, because you can navigate to any directory in the command line and open that directory in VSCode using the `code .` command (the dot `.` means "here, this directory").
+
 :pencil2: Install Visual Studio Code by following [these instructions](https://code.visualstudio.com/docs/setup/setup-overview).
+Alternative: Install the [Cursor IDE](https://www.cursor.com/), which is based on Visual Studio Code.
 
 ### 3.2 - Workspace setup
 
@@ -26,7 +29,7 @@ You will learn to:
 
 :pencil2: Open a terminal.
 
-:book: By default, `bash` will set the current working directory to the value of the global enviroment variable `$HOME`, which will vary by OS:
+:book: By default, `bash` will set the current working directory to the value of the global environment variable `$HOME`, which will vary by OS:
 
 - Linux: `/home/<username>`
 - macOS and Windows (Git Bash): `/Users/<username>`
@@ -112,6 +115,21 @@ Hello World!
 ```
 
 ### 3.4 - Create bash scripts
+
+TODO - intro about for-loops here
+
+TODO - exercise with a simple for-loop
+
+TODO - intro about if-statements here
+
+TODO - exercise with an if-statement
+
+TODO - exercise with a for loop and if statement
+
+TODO - explain how to read command-line arguments
+
+TODO - exercise with command line arguments
+
 
 :book: These tasks require you to create bash scripts that you can execute in your shell. Remember to set the correct file permissions on each script file you create.
 
