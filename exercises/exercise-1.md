@@ -182,11 +182,13 @@ The result should be something like this:
 :exclamation: Not seeing Git Bash in the list? See the first ansver to [this StackOverflow question](https://stackoverflow.com/questions/56839307/adding-git-bash-to-the-new-windows-terminal) to add Git Bash to Windows Terminal.
 
 
-## Check the result
+## 1.4 Check the result
 :pencil2: If you have successfully installed Bash on your computer, open it, type the following command:
-`echo "Hello, Bash!"`
+`echo "Hello, Bash"`
 
-After pressint <kbd>Enter</kbd> you should see the `Hello, Bash!` message displayed in the next line of the terminal. If that works - congrats, you are done with Exercise 1! If it did not work, go back and troubleshoot.
+After pressint <kbd>Enter</kbd> you should see the `Hello, Bash` message displayed in the next line of the terminal. If that works - congrats, you are done with Exercise 1! If it did not work, go back and troubleshoot.
+
+:bulb: Don't include the exclamation mark in the message, such as `echo "Hello, Bash!"`. The exclamation mark symbol `!` may be interpreted in a bit special way and you can get stuck! ;). If you absolutely want to print the exclamation mark, you need to prepend it with the escape symbol `\`, such as here: `echo "Hello, Bash\!"`.
 
 ## Summary
 
