@@ -14,7 +14,7 @@ You will learn to:
 
 ## 2.1 - The command prompt
 
-:book: When you start a shell, a prompt appears on the screen where the user can type text input. This prompt is also called a _command line_ or _commmand prompt_. On most systems the prompt has a `$` to denote where the command prompt is on the screen:
+:book: When you start a shell, a prompt appears on the screen where the user can type text input. This prompt is also called a _command line_ or _command prompt_. On most systems the prompt has a `$` to denote where the command prompt is on the screen:
 
 ```bash
 $
@@ -37,14 +37,14 @@ $ ls
 
 ### 2.2.1 - Bash on macOS
 
-:exclamation: __macOS users__: The default shell in macOS Catalina and newer is set to `zsh` (not `bash`). There are several alternative solutions:
+:exclamation: **macOS users**: The default shell in macOS Catalina and newer is set to `zsh` (not `bash`). There are several alternative solutions:
 
 - Simply use the built-in `zsh` shell, it should work fine in the most cases.
-- Inside `zsh` start bash by typing `bash` and then pressing <kbd>Enter</kbd>. The bash included in macOS by default is quite old. It should work fine for all the exercises. However, if you want to install a newer version of bash, use Homebrew. Here you should be careful though, you may brake some expectations for other apps on macOS. 
+- Inside `zsh` start bash by typing `bash` and then pressing <kbd>Enter</kbd>. The bash included in macOS by default is quite old. It should work fine for all the exercises. However, if you want to install a newer version of bash, use Homebrew. Here you should be careful though, you may brake some expectations for other apps on macOS.
 - You can set the default shell to `bash` by following [this guide](https://www.howtogeek.com/444596/how-to-change-the-default-shell-to-bash-in-macos-catalina/). Use the `echo $SHELL` command to list what shell you currently are using.
 
-
 ### 2.2.2 - Your first command
+
 :pencil2: Start by opening your terminal application.
 
 :pencil2: Try listing the contents of a folder using the `ls <foldername>` command.
@@ -63,7 +63,7 @@ An example:
 `cp -R dir1/ dir2/` - copy all files and subdirectories from `dir1` into `dir2`
 
 - `cp` is the command
-- `-R` is a parameter - in the context of `cp` it means copy recursively (copy all files and subfolders).
+- `-R` is a parameter - in the context of `cp` it means copy recursively (copy all files and subdirectories).
 - `dir1/` is a argument - In the context of `cp` it's the source directory
 - `dir2/` is a argument - In the context of `cp` it's the target folder
 
@@ -78,12 +78,14 @@ What parameters and arguments a command takes, and if they are mandatory or not 
 These first tasks are all about getting comfortable in your terminal, and execute some common commands.
 
 Here and onwards we don't always give precise hints on which command to use. The idea is that:
+
 - The first time(s) when you need to do task X, you look up the necessary commands in cheat sheets, documentation, AI-assistants or Google
 - Gradually over time you remember the most used commands
 
 :bulb: Check out the [Posix (Unix) command cheat sheet](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf)
 
 :bulb: In this section the following commands may be useful:
+
 - `pwd`
 - `cd`
 - `ls`
@@ -97,6 +99,7 @@ Here and onwards we don't always give precise hints on which command to use. The
 :star: Bonus challenge: print the date and time in the following format: yyyy-mm-dd hh:mm:ss, for example 2025-02-19 16:10:52.
 
 :pencil2: List the files in the current directory, in the long-listing format. The output should look something similar to this (not necessarily the files, but the properties for each file):
+
 ```bash
 total 20
 drwxr-xr-x 1 gist 4096    0 Feb  4 13:20 exercises/
@@ -107,15 +110,16 @@ drwxr-xr-x 1 gist 4096    0 Feb  4 13:20 solutions/
 ```
 
 :pencil2: Navigate to your local clone of this repository. Hints:
+
 - :bulb: Use the "code"-button in the GitHub-repository for this workshop, if you haven't already, to clone the repository
-- How to find where the GIT directory is located in the file system? This depends on your operating system and where you saved the directory. Let's say you downloaded it as `shell-scripting` directory inside your user's Downloads folder. 
+- How to find where the GIT directory is located in the file system? This depends on your operating system and where you saved the directory. Let's say you downloaded it as `shell-scripting` directory inside your user's Downloads folder.
   - On Windows, using Git Bash, this will be available under `/c/Users/<yourUsername>/Downloads/shell-scripting`
   - On macOS, it will be under `/Users/<yourUsername>/Downloads/shell-scripting` (same as Windows, just without the `c/`)
   - On Linux: `/home/<yourUsername>/Downloads/shell-scripting`
-- :bulb: Use the `cd` command to navigate to the neccesary directory. For example, `cd /c/Users/girts/Dowloads/shell-scripting`.
-
+- :bulb: Use the `cd` command to navigate to the necessary directory. For example, `cd /c/Users/girts/Downloads/shell-scripting`.
 
 :star: Bonus challenge: List the hidden files (if any) in a directory (:bulb: hint: in unix, hidden files starts with dot (".ssh")) If you are in the directory with the git repository of this workshop, you should see something similar to this:
+
 ```bash
 ./  ../  .git/  .gitignore  exercises/  files/  README.md  solutions/
 ```
@@ -166,7 +170,7 @@ $ TEST=123
 $
 ```
 
-Note that assiging a value to a variable will not generate any output.
+Note that assigning a value to a variable will not generate any output.
 
 :pencil2: To show the value of a variable, you can use the `echo`-command. References to variables need a `$` prefix:
 
@@ -226,7 +230,7 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 :book: Depending on the OS and terminal settings, you may find that these shortcuts are not working as expected inside the terminal.
 
-:book: In Linux you may for instance see `^V` outputed if you try to paste some text into the terminal window. The short answer is that this is because the <kbd>CTRL</kbd> key has a special meaning in terminals, used to send signals to the terminal (terminate current program, etc.). They therefore sometimes collide with CTRL-based OS shortcuts.
+:book: In Linux you may for instance see `^V` printed if you try to paste some text into the terminal window. The short answer is that this is because the <kbd>CTRL</kbd> key has a special meaning in terminals, used to send signals to the terminal (terminate current program, etc.). They therefore sometimes collide with CTRL-based OS shortcuts.
 
 ### Windows
 
@@ -299,7 +303,7 @@ You can also clear the screen by running the `clear` command.
 
 ## 2.7 - Terminating processes
 
-:book: Some times you need to terminate a running process if it hangs or if it does not respond to any user input. An example of this is a script with a endless loop. To terminate a running process we can send a signal to it. There are several differen types of signals that do different things, but the one we are interested in is called `SIGINT` (SIGnal INTerupt). There is a handy shortcut for sending this signal:
+:book: Some times you need to terminate a running process if it hangs or if it does not respond to any user input. An example of this is a script with a endless loop. To terminate a running process we can send a signal to it. There are several different types of signals that do different things, but the one we are interested in is called `SIGINT` (SIGnal INTerupt). There is a handy shortcut for sending this signal:
 
 - <kbd>CTRL+C</kbd> - Signals the current process to stop.
 
