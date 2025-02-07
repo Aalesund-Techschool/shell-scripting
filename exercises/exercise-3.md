@@ -1,5 +1,3 @@
-<!-- TODO: Move PATH introduction from 2.3 to this exercise -->
-
 # Exercise 3 - Scripting
 
 You will learn to:
@@ -14,7 +12,7 @@ You will learn to:
 
 ---
 
-### 3.1 - Install required software
+### 3.1 Install required software
 
 :book: We are going to be using [Visual Studio Code](https://code.visualstudio.com/) to create and edit script files.
 
@@ -23,7 +21,7 @@ Note: You can use any text editor of your choice. VSCode is a simple alternative
 :pencil2: Install Visual Studio Code by following [these instructions](https://code.visualstudio.com/docs/setup/setup-overview).
 Alternative: Install the [Cursor IDE](https://www.cursor.com/), which is based on Visual Studio Code.
 
-### 3.2 - Workspace setup
+### 3.2 Workspace setup
 
 :book: Before we start, you need to create a temporary folder that will be your workspace for this workshop. Creating a folder inside your user "home" folder is the easiest way.
 
@@ -50,7 +48,7 @@ The result should be something like this:
 
 <img src="images/ex3_1.png">
 
-## 3.3 - Hello world script
+### 3.3 Hello world script
 
 :book: Notice that the left side Explorer pane of VS Code is empty, because the folder you opened is empty. To create a empty file using the command line, use the command `touch <filename>`.
 
@@ -76,7 +74,7 @@ echo "$MESSAGE"
 
 :book: The last two lines in the script assigns a value to a local variable and outputs it.
 
-### Executing scripts
+#### 3.3.1 Executing scripts
 
 :book: To execute a script, use the syntax `./<scriptname.sh>`.
 
@@ -92,7 +90,7 @@ bash: ./helloworld.sh: Permission denied
 
 :book: In order for a script to be executable, you need to set the _file permissons_ for the script file correctly.
 
-### File permissions
+#### 3.3.2 File permissions
 
 :book: In Unix shells, scripts and programs (binaries) are both _files_. To be able to execute a script or a program, the correct file permissions must be set.
 
@@ -116,15 +114,32 @@ Hello World!
 
 ### 3.4 Accessing command-line arguments
 
-TODO - write a short tutorial
+You can access command-line arguments in a script by using the `$1`, `$2`, `$3` etc. variables. `$1` is the first argument, `$2` is the second argument, and so on. To check the number of arguments passed to the script, you can use the `$#` variable.
 
-:pencil2: Write a bash script which takes one command line argument and prints the following output: `You have passed <argument> as an argument.`. Save the script as `args.sh`, set execution permissions for it. Now run `./args.sh Chuck`. You should see output `You have passed Chuck as an argument.`
+Example:
 
-### 3.5 - Create bash scripts
+```bash
+#!/bin/bash
+echo "You have passed $# arguments"
+echo "The first argument is $1"
+echo "The second argument is $2"
+```
+
+:pencil2: Create a new file, save it as `args.sh`, set execution permissions for it. Now run `./args.sh abc ddd`. You should see output
+
+```
+You have passed 2 arguments
+The first argument is abc
+The second argument is ddd
+```
+
+:pencil2: Modify the `args.sh` script so that it takes two arguments and prints the following output: `You are executing the script with the following arguments: <first_argument> <second_argument>`. Save the script as `args.sh`, set execution permissions for it. Now run `./args.sh Chuck Norris`. You should see output `You are executing the script with the following arguments: Chuck Norris`.
+
+### 3.5 Conditional statements
 
 Scripts are simply a list of commands. However, these commands can include some logic as well. Let's look at two possible logic constructions: for-loops and if-statements.
 
-#### 3.5.2 For-loops
+#### 3.5.1 For-loops
 
 If you are familiar with programming, you have seen for-loops. Essentially, a loop is a construct which repeats a piece of code several times. In Bash, the syntax of a for-loop is as follows:
 
@@ -132,6 +147,7 @@ If you are familiar with programming, you have seen for-loops. Essentially, a lo
 for <variable> in <list>
 do
   # Some code here - this will be repeated
+  # for each value in the list
 done
 ```
 
@@ -175,6 +191,17 @@ do
 done
 ```
 
+There is a simpler way to iterate over all the files in a directory. You can use the `*` wildcard character to match all files in a directory. For example, `ls *` will list all files in the current directory.
+
+```bash
+for filename in *
+do
+  echo $filename
+done
+```
+
+You can replace the `*` wildcard with a specific directory path. For example, to iterate over all the files in the `/home/user/techschool-shellscripting` directory, you can use `for filename in /home/user/techschool-shellscripting/*`.
+
 The `seq` command generates a sequence of values. For example, `seq 1 4` generates values `1 2 3 4`; `seq 2 14 4` generates values from 2 to 14 with step 4, i.e., `2 6 19 14`.
 
 :pencil2: What do you think will be printed to the terminal by this script?
@@ -202,6 +229,15 @@ done
 ```
 
 :pencil2: What will this script print out?
+
+You can even use fancy C-style for loops in bash:
+
+```bash
+for ((i=1; i < 10; i++))
+do
+  echo $i
+done
+```
 
 There are different ways you can write for-loops in bash. Some syntax variants are added in later versions of bash and will not work on macOS by default (unless you update bash). Check out different examples in [this article](https://www.cyberciti.biz/faq/bash-for-loop/).
 
@@ -233,7 +269,7 @@ The number is 8
 The number is 10
 ```
 
-#### 3.5.3 If-statements
+#### 3.5.2 If-statements
 
 Sometimes you want to have branching in your script - if a condition is true, do one thing, otherwise do something else. The general syntax for if-statements in bash:
 
@@ -307,17 +343,102 @@ else
 fi
 ```
 
-:pencil2: Create a bash script
+:pencil2: Write a bash script `arg_check.sh` that checks whether the script is executed with an argument. If it is, print `The argument is <argument>`. If it is not, print `No argument provided`.
 
-TODO - exercise with an if-statement
+:pencil2: Write a bash script `args.sh` that takes two arguments and prints them in the following format: `You are executing the script with the following arguments: <first_argument> and  <second_argument>`. If one or both arguments are missing, print `You must provide two arguments for the script to work`.
 
 :pencil2: Modify the `args.sh` script you created before. If the first argument for the command is `Chuck`, print `There are no arguments with Chuck` instead of the default message.
 
-TODO - exercise with a for loop and if statement
+#### 3.5.3 Functions in Bash
 
-TODO - explain how to read command-line arguments
+When you want to reuse a piece of code, you can define a function with some code body. Then you can call that function as many times as you want in the code. This is the same as all other functions in other programming languages. You define a function by using the `function` keyword. Then you call the function by its name.
+Example:
 
-TODO - exercise with command line arguments
+```bash
+function hello() {
+  echo "Hello, world!"
+}
+
+hello
+hello
+hello
+```
+
+The function can also take arguments. You can then access the arguments by using the `$1`, `$2`, `$3` etc. variables.
+
+```bash
+function hello() {
+  echo "Hello, $1!"
+}
+
+hello Chuck
+hello John
+```
+
+Note: The `echo` command is used to return a value from a function.
+
+:pencil2: Write a script `sum.sh` that defines a function `sum` and calls it with arguments 1 and 2. The function should return the sum of the two arguments.
+
+A function can also return a value. You can do this by using the `return` keyword. The value returned by the function is then available using the `$?` variable.
+
+```bash
+function square() {
+  echo $(($1 * $1))
+}
+
+square 2
+echo $?
+```
+
+You can also store the return value of a function in a variable.
+
+```bash
+function square() {
+  echo $(($1 * $1))
+}
+
+n=$(square 7)
+echo $n
+```
+
+The value can be used in arithmetic expressions as well.
+
+```bash
+function square() {
+  echo $(($1 * $1))
+}
+
+n=$(square 7)
+echo $((n + 1))
+## Or like this:
+echo $(( $(square 7) + 1 ))
+```
+
+:pencil2: Write a script `largest.sh` that defines a function `largest` and calls it with arguments 10 and 20. The function should return the largest of the two arguments.
+
+:pencil2: Call the `largest` function with arguments from the command line and print the result.
+
+:pencil2: Add an if-statement which check whether two command-line arguments are provided. If not, print `You must provide two arguments for the script to work`.
+
+#### 3.5.4 Combining for-loops and if-statements
+
+:pencil2: Write a script `even_numbers.sh` that prints out all even numbers between 1 and 20.
+
+:bulb: you can check whether number `i` is an even number, by checking whether the remainder of division by two is zero in the following way: `if [ $((i % 2)) -eq 0 ]; then`.
+
+:bulb: The `$(())` is used to write arithmetic expressions. See [this article](https://ryanstutorials.net/bash-scripting-tutorial/bash-arithmetic.php) for more arithmetic options.
+
+:pencil2: Write a script `even_numbers_between.sh` that takes two arguments and prints out all even numbers between the two arguments. Run that script with arguments 13 and 19
+
+:pencil2: Write a script `is_prime.sh` that takes one argument and checks if the argument is a prime number. It prints `Prime` if the number is prime, and `Not prime` if the number is not prime. Hint: a prime number is a number which is divisible only by 1 and itself.
+
+:star: Bonus challenge: stop checking the divisibility when you first encounter a number that is a divisor of the given number. :bulb: Hint: you can use the `break` keyword to stop a loop.
+
+:star: Bonus challenge: write a function `sqrt` which calculates the square root of a number, rounded down to the nearest integer. You can then test divisibility of the given number by all numbers in the range 2..sqrt(n).
+
+:star: Bonus challenge: write a script `primes.sh` which prints out all prime numbers between 1 and 100. :bulb: Hint: you can use the `is_prime.sh` script you created before, just modify it to echo 1 when the passed argument is a prime number, and 0 otherwise, remove all other echoes.
+
+#### 3.5.5 More scripting exercises
 
 :book: These tasks require you to create bash scripts that you can execute in your shell. Remember to set the correct file permissions on each script file you create.
 
@@ -326,7 +447,7 @@ TODO - exercise with command line arguments
 :pencil2: Make a variable containing the path of a directory or a file that exists in your filesystem.
 Make a test that checks whether the path is a directory or a regular file. Print `Directory` if the path is a directory, or `File` if the path is a regular file. Create a script that you can run to check the status of the path currently stored in your variable (e.g. `./filecheck.sh`).
 
-:star: Bonus: Instead of storing the path of the file or folder you want to check, can you pass it inn as a parameter to the script? (E.g. `./filecheck.sh /home/myfolder`).
+:star: Bonus: Instead of storing the path of the file or folder you want to check, can you pass it inn as an argument to the script? (E.g. `./filecheck.sh /home/myfolder`).
 
 :star: Bonus: Are you able to use the variable containing the file or directory, printing the path of the file in the output? E.g. `"/home/root/file.txt" is a file`.
 
