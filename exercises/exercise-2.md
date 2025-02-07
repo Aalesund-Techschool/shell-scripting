@@ -218,11 +218,11 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 :book: Most users are already familiar with the cut, copy and paste shortcuts, but here is a reminder anyway:
 
-| Command | Windows shortcut  | Linux shortcut    | macOS shortcut   |
-| ------- | ----------------- | ----------------- | ---------------- |
-| Cut     | <kbd>CTRL+X</kbd> | <kbd>CTRL+X</kbd> | <kbd>?+X</kbd> |
-| Copy    | <kbd>CTRL+C</kbd> | <kbd>CTRL+C</kbd> | <kbd>?+C</kbd> |
-| Paste   | <kbd>CTRL+V</kbd> | <kbd>CTRL+V</kbd> | <kbd>?+V</kbd> |
+| Command | Windows shortcut  | Linux shortcut    | macOS shortcut |
+| ------- | ----------------- | ----------------- | -------------- |
+| Cut     | <kbd>CTRL+X</kbd> | <kbd>CTRL+X</kbd> | <kbd>⌘+X</kbd> |
+| Copy    | <kbd>CTRL+C</kbd> | <kbd>CTRL+C</kbd> | <kbd>⌘+C</kbd> |
+| Paste   | <kbd>CTRL+V</kbd> | <kbd>CTRL+V</kbd> | <kbd>⌘+V</kbd> |
 
 :book: Depending on the OS and terminal settings, you may find that these shortcuts are not working as expected inside the terminal.
 
@@ -246,7 +246,7 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 ### Mac
 
-:book: If you are using Mac you can use the normal <kbd>?+C</kbd> and <kbd>?+V</kbd> shortcuts.
+:book: If you are using Mac you can use the normal <kbd>⌘+C</kbd> and <kbd>⌘+V</kbd> shortcuts.
 
 ## 2.6 - Basic command line navigation
 
@@ -258,8 +258,8 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 Go to the previous command in the command history using arrow up and down:
 
-- <kbd>?</kbd>
-- <kbd>?</kbd>
+- <kbd>↑</kbd>
+- <kbd>↓</kbd>
 
 ### Go to beginning / end
 
@@ -272,9 +272,8 @@ Quickly jump to the beginning or end of the text:
 
 For a little more fine-grained movement, you can jump backwards or forwards one word at a time:
 
-- <kbd>Alt + B</kbd> or <kbd>ALT + ?</kbd> - Go back one word
-- <kbd>Alt + F</kbd> or <kbd>ALT + ?</kbd> - Go forward one word
-
+- <kbd>Alt + B</kbd> or <kbd>ALT + ←</kbd> - Go back one word
+- <kbd>Alt + F</kbd> or <kbd>ALT + →</kbd> - Go forward one word
 
 ### Search command history
 
