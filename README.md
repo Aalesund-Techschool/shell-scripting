@@ -8,7 +8,7 @@ You'll learn some basic bash programming and produce a simple deployment script 
 This repository contains a link to a Google Presentation with a quick introduction to the CLI,
 some tips on useful tools and exercises. Happy hacking!
 
-## [Open presentation slides](https://docs.google.com/presentation/d/1XWCWgZ-a7r9EyyZvL_DoszoonElg-fDQKQQsqAwWqbg/)
+## [Open presentation slides](https://google.com/) - TODO - add correct link
 
 ## What you need
 
