@@ -375,11 +375,7 @@ hello Chuck
 hello John
 ```
 
-Note: The `echo` command is used to return a value from a function.
-
-:pencil2: Write a script `sum.sh` that defines a function `sum` and calls it with arguments 1 and 2. The function should return the sum of the two arguments.
-
-A function can also return a value. You can do this by using the `return` keyword. The value returned by the function is then available using the `$?` variable.
+:bulb: Note: The `echo` command is used to return a value from a function. The value returned by the function is then available using the `$?` variable.
 
 ```bash
 function square() {
@@ -413,6 +409,8 @@ echo $((n + 1))
 ## Or like this:
 echo $(( $(square 7) + 1 ))
 ```
+
+:pencil2: Write a script `sum.sh` that defines a function `sum` and calls it with arguments 1 and 2. The function should return the sum of the two arguments.
 
 :pencil2: Write a script `largest.sh` that defines a function `largest` and calls it with arguments 10 and 20. The function should return the largest of the two arguments.
 
