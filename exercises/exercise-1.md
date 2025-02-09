@@ -109,7 +109,7 @@ Examples of some shells:
 
 ### 1.2.2 - Mac-users
 
-:book: macOS comes with Bash and a terminal application called _Terminal_, so you can safely skip this step if you are a Mac user.
+:pencil2: macOS comes with Bash and a terminal application called _Terminal_. zch is now the default shell in the terminal but version 3.2 of bash is included. You can activate bash from zsh simply by the command bash. If you are familiar with homebrew, you can update bash, but we believe that all tasks can also be solved with zsh or bash 3.2.
 
 ### 1.2.3 - Windows-users
 
