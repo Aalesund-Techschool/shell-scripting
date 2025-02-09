@@ -14,6 +14,12 @@
 - **W**rite - The permission to write to the file
 - E**x**ecute - The permission to execute the file
 
+For directories the permissions are slightly different:
+
+- **R**ead - The permission to list the contents of the directory
+- **W**rite - The permission to add or remove files from the directory
+- E**x**ecute - The permission to access the directory
+
 :book: To see the permission settings for any file, you can use the `ls` command with the option `-l`, which lists files using "long format".
 
 :pencil2: Try displaying the file permissions for `helloworld.sh` by using the `ls -l <filename>` command.
