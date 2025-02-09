@@ -10,8 +10,6 @@ You will learn to:
 - Bash
 - Visual Studio Code
 
----
-
 ### 3.1 Install required software
 
 :book: We are going to be using [Visual Studio Code](https://code.visualstudio.com/) to create and edit script files.
@@ -349,7 +347,7 @@ fi
 
 :pencil2: Modify the `args.sh` script you created before. If the first argument for the command is `Chuck`, print `There are no arguments with Chuck` instead of the default message.
 
-#### 3.5.3 Functions in Bash
+### 3.6 Functions in Bash
 
 When you want to reuse a piece of code, you can define a function with some code body. Then you can call that function as many times as you want in the code. This is the same as all other functions in other programming languages. You define a function by using the `function` keyword. Then you call the function by its name.
 Example:
@@ -418,7 +416,7 @@ echo $(( $(square 7) + 1 ))
 
 :pencil2: Add an if-statement which check whether two command-line arguments are provided. If not, print `You must provide two arguments for the script to work`.
 
-#### 3.5.4 Combining for-loops and if-statements
+### 3.7 Combining for-loops and if-statements
 
 :pencil2: Write a script `even_numbers.sh` that prints out all even numbers between 1 and 20.
 
@@ -436,13 +434,14 @@ echo $(( $(square 7) + 1 ))
 
 :star: Bonus challenge: write a script `primes.sh` which prints out all prime numbers between 1 and 100. :bulb: Hint: you can use the `is_prime.sh` script you created before, just modify it to echo 1 when the passed argument is a prime number, and 0 otherwise, remove all other echoes.
 
-#### 3.5.5 More scripting exercises
+### 3.8 More scripting exercises
 
 :book: These tasks require you to create bash scripts that you can execute in your shell. Remember to set the correct file permissions on each script file you create.
 
 :pencil2: Make a script that uses a for loop to print out the first few lines of each file in a directory.
 
 :pencil2: Make a variable containing the path of a directory or a file that exists in your filesystem.
+
 Make a test that checks whether the path is a directory or a regular file. Print `Directory` if the path is a directory, or `File` if the path is a regular file. Create a script that you can run to check the status of the path currently stored in your variable (e.g. `./filecheck.sh`).
 
 :star: Bonus: Instead of storing the path of the file or folder you want to check, can you pass it inn as an argument to the script? (E.g. `./filecheck.sh /home/myfolder`).
@@ -451,7 +450,7 @@ Make a test that checks whether the path is a directory or a regular file. Print
 
 ---
 
-### 3.6 - Adding scripts to the $PATH
+### 3.9 Adding scripts to the $PATH
 
 :book: If you create a script you want to use without executing it from the directory it is located in, you can add the script directory to the `$PATH` variable. Like we discussed in the previous exercise, the `$PATH` is set at startup and can be overridden using a `.bashrc` configuration file in the home directory.
 

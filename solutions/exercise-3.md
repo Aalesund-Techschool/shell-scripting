@@ -63,12 +63,13 @@ do
 done
 ```
 
-#### 3.5.3 Functions in Bash
+### 3.6 Functions in Bash
 
 _Write a script `sum.sh` that defines a function `sum` and calls it with arguments 1 and 2. The function should return the sum of the two arguments._
 
 ```bash
 #!/bin/bash
+
 function sum() {
   echo $(($1 + $2))
 }
@@ -129,9 +130,10 @@ largest $1 $2
 echo $?
 ```
 
-#### 3.5.4 Combining for-loops and if-statements
+### 3.7 Combining for-loops and if-statements
 
 _Write a script `even_numbers.sh` that prints out all even numbers between 1 and 20._
+
 
 :bulb: We could simply use `seq 2 2 20`, but then we would not practice if-statements ;)
 
@@ -290,12 +292,13 @@ else
 fi
 ```
 
-#### 3.5.5 More scripting exercises
+### 3.8 More scripting exercises
 
 _Make a script that uses a for loop to print out the first few lines of each file in a directory._
 
 ```bash
 #!/bin/bash
+
 
 for filename in ./*
 do
