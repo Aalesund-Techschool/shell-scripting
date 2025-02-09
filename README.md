@@ -15,7 +15,7 @@ some tips on useful tools and exercises. Happy hacking!
 You'll only need the Bash shell:
 
 - Linux: Bash is already included
-- MacOS: MacOS: zch er nå default shell i terminalen og versjon 3.2 av bash er med. Er du fortrolig med homebrew kan du oppdatere bash, men vi tror at alle oppgavene også kan løses med zsh eller bash 3.2.
+- MacOS: zch er nå default shell i terminalen og versjon 3.2 av bash er med. Er du fortrolig med homebrew kan du oppdatere bash, men vi tror at alle oppgavene også kan løses med zsh eller bash 3.2.
 - Windows: Install [Git for Windows](https://git-scm.com/download/win) - Remember to opt in for Git Bash when installing
 
 ## How to get started
