@@ -63,7 +63,7 @@ A diff-block will show if there is text that should be added or removed (- remov
 
 ## Helpful resources
 
-See command line cheat sheet
+See command line [cheat sheet](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf).
 
 ### 1. Navigation commands
 
@@ -104,4 +104,6 @@ See command line cheat sheet
 - Ask the instructors
 - Ask an AI-assistant like ChatGPT. For example ["How do I list all .txt files with bash?"](https://chatgpt.com/share/67a20af4-f21c-800b-943e-609418eee6cf)
 - Google is, as always, your friend
+- Commands typically have the `-h` or `--help` flag to show help. For example `ls --help` will show you the help for the `ls` command.
+- See the [cheat sheet](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf).
 - `man <command>` - run the `man` command to get help for a command. For example `man ls` will show you the help for the `ls` command.
