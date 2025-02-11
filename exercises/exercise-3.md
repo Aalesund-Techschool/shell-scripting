@@ -200,7 +200,7 @@ done
 
 You can replace the `*` wildcard with a specific directory path. For example, to iterate over all the files in the `/home/user/techschool-shellscripting` directory, you can use `for filename in /home/user/techschool-shellscripting/*`.
 
-The `seq` command generates a sequence of values. For example, `seq 1 4` generates values `1 2 3 4`; `seq 2 14 4` generates values from 2 to 14 with step 4, i.e., `2 6 19 14`.
+The `seq` command generates a sequence of values. For example, `seq 1 4` generates values `1 2 3 4`; `seq 2 4 14` generates values from 2 to 14 with step 4, i.e., `2 6 10 14`.
 
 :pencil2: What do you think will be printed to the terminal by this script?
 
