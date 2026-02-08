@@ -32,7 +32,12 @@ You'll only need the Bash shell:
 - [Exercise 3](./exercises/exercise-3.md/) - Scripting
 - [Exercise 4](./exercises/exercise-4.md/) - Using pipelines and redirects
 - [Exercise 5](./exercises/exercise-5.md/) - Number guessing game
-- [Bonus exercise](./exercises/exercise-bonus.md/) - Bonus exercise(s)
+- [Exercise 6](./exercises/exercise-6.md/) - Redirects and grep
+- [Exercise 7](./exercises/exercise-7.md/) - Case statements
+- [Exercise 8](./exercises/exercise-8.md/) - Menu-driven scripts
+- [Exercise 9](./exercises/exercise-9.md/) - String manipulation
+- [Exercise 10](./exercises/exercise-10.md/) - Stream editing with sed
+- [Bonus exercise](./exercises/bonus-1.md/) - Bonus exercise(s)
 
 ## Solutions
 

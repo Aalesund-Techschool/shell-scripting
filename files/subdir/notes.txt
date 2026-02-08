@@ -1,0 +1,16 @@
+Meeting Notes - Project Planning
+
+Date: 2024-02-08
+
+TODO: Review the deployment script
+TODO: Update documentation
+- Discussed new features for Q1
+- Team agreed on sprint goals
+DONE: Set up development environment
+TODO: Schedule code review session
+- Next meeting: Friday 2pm
+
+Action Items:
+1. TODO: Send meeting minutes to team
+2. Complete performance testing
+3. TODO: Prepare presentation slides

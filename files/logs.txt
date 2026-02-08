@@ -1,0 +1,12 @@
+2024-02-08 10:15:23 INFO Server started
+2024-02-08 10:15:24 INFO Connected to database
+2024-02-08 10:16:10 WARNING Cache miss
+2024-02-08 10:17:45 ERROR Connection timeout
+2024-02-08 10:18:12 INFO Request processed
+2024-02-08 10:19:33 ERROR Failed to write to disk
+2024-02-08 10:20:01 WARNING Low memory
+2024-02-08 10:21:15 INFO User login successful
+2024-02-08 10:22:30 ERROR Database connection lost
+2024-02-08 10:23:45 WARNING Retry attempt 1
+2024-02-08 10:24:00 INFO Connection restored
+2024-02-08 10:25:10 ERROR Authentication failed

@@ -31,4 +31,4 @@ Number: 58
 Wooho! You guessed it using 7 tries.
 ```
 
-### [:star: Go to Bonus exercise :arrow_right:](./bonus-1.md)
+### [Go to exercise 6 :arrow_right:](./exercise-6.md)
