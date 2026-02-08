@@ -8,7 +8,7 @@ You'll learn some basic bash programming and produce a simple deployment script 
 This repository contains a link to a Google Presentation with a quick introduction to the CLI,
 some tips on useful tools and exercises. Happy hacking!
 
-[Slides from the workshop presentation 2025-02-10](https://docs.google.com/presentation/d/e/2PACX-1vTWynkp2EHIwSKHErgIqnxN-WT_c5hwV0umZHWjk7UNtnfwqKa_0bIpJnPGDDX0Zi2pyDOEoz_CrSUE/pub?start=false&loop=false&delayms=3000)
+[Slides from the workshop presentation 2026-02-10](https://docs.google.com/presentation/d/13wFrnPyK8kr743sMfd65OKXrcjqkikjsELIkgVisDWM/edit?usp=sharing)
 
 ## What you need
 
@@ -102,7 +102,7 @@ See command line [cheat sheet](https://upload.wikimedia.org/wikipedia/commons/b/
 ### 5. How do I get help?
 
 - Ask the instructors
-- Ask an AI-assistant like ChatGPT. For example ["How do I list all .txt files with bash?"](https://chatgpt.com/share/67a20af4-f21c-800b-943e-609418eee6cf)
+- Ask an AI-assistant like ChatGPT. For example ["How do I list all .txt files with bash?"](https://chatgpt.com/share/67a20af4-f21c-800b-943e-609418eee6cf). Note: for maximum learning don't ask AI agents to give you answers directly. Instead, say something like "I'm learning Unix command line. Please, give me hints, but not answers." Then ask your question.
 - Google is, as always, your friend
 - Commands typically have the `-h` or `--help` flag to show help. For example `ls --help` will show you the help for the `ls` command.
 - See the [cheat sheet](https://upload.wikimedia.org/wikipedia/commons/b/b7/POSIX_Utilities.pdf).

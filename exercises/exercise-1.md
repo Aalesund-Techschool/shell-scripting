@@ -63,7 +63,7 @@ Examples of alternative terminal emulators:
 
 ### 1.1.3 - Consoles
 
-:book: A console in the historical context of computers is a cabinet with a screen and a keyboard combined inside it. The early video terminals consisted of a physical device called a _console_ and a piece of software running on it to  handle input and output called the _terminal_.
+:book: A console in the historical context of computers is a cabinet with a screen and a keyboard combined inside it. The early video terminals consisted of a physical device called a _console_ and a piece of software running on it to handle input and output called the _terminal_.
 
 :book: In the context of modern terminals the terms _console_ and _terminal_ are synonymous. In this workshop we will use the term _terminal_ to avoid confusion.
 
@@ -76,7 +76,7 @@ Examples of some shells:
 - bash, zsh, sh (Unix shells)
 - Powershell, Command Prompt (Windows shells)
 
-:exclamation: It is important to know that a terminal can be used with multiple shells - one terminal, multiple shells.
+:exclamation: A terminal can be used with multiple shells - one terminal, multiple shells.
 
 #### 1.1.4.1 - Unix shells
 
@@ -109,7 +109,7 @@ Examples of some shells:
 
 ### 1.2.2 - Mac-users
 
-:pencil2: macOS comes with Bash and a terminal application called _Terminal_. zch is now the default shell in the terminal but version 3.2 of bash is included. You can activate bash from zsh simply by the command bash. If you are familiar with homebrew, you can update bash, but we believe that all tasks can also be solved with zsh or bash 3.2.
+:pencil2: macOS comes with Bash and a terminal application called _Terminal_. `zch` is now the default shell in the terminal but version 3.2 of bash is included. You can activate bash from zsh simply by running the command `bash`. If you are familiar with homebrew, you can update bash, but we believe that all tasks can also be solved with zsh or bash 3.2.
 
 ### 1.2.3 - Windows-users
 
@@ -121,7 +121,7 @@ Examples of some shells:
 
 :pencil2: (Optional) If you are on Windows 10 or earlier, follow [the official install instructions](https://docs.microsoft.com/en-us/windows/terminal/install) to install Windows Terminal.
 
-:bulb: __Tip for experienced users:__ If you want a real, proper Linux environment in Windows, you can install [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/), or WSL. Note that this is out of scope for this workshop, as the install process is much more comprehensive than just installing an application. If you decide to install WSL, the install time is usually around 10 minutes (depending on Internet speeds and your computer). Windows Terminal is recommended in combination with WSL.
+:bulb: **Tip for experienced users:** If you want a real, proper Linux environment in Windows, you can install [Windows Subsystem For Linux](https://docs.microsoft.com/en-us/windows/wsl/), or WSL. Note that this is out of scope for this workshop, as the install process is much more comprehensive than just installing an application. If you decide to install WSL, the install time is usually around 10 minutes (depending on Internet speeds and your computer). Windows Terminal is recommended in combination with WSL.
 
 ---
 
@@ -181,15 +181,14 @@ The result should be something like this:
 
 :exclamation: Not seeing Git Bash in the list? See the first ansver to [this StackOverflow question](https://stackoverflow.com/questions/56839307/adding-git-bash-to-the-new-windows-terminal) to add Git Bash to Windows Terminal.
 
-
 ## 1.4 Check the result
+
 :pencil2: If you have successfully installed Bash on your computer, open it, type the following command:
 `echo "Hello, Bash"`
 
 After pressint <kbd>Enter</kbd> you should see the `Hello, Bash` message displayed in the next line of the terminal. If that works - congrats, you are done with Exercise 1! If it did not work, go back and troubleshoot.
 
 :bulb: Don't include the exclamation mark in the message, such as `echo "Hello, Bash!"`. The exclamation mark symbol `!` may be interpreted in a bit special way and you can get stuck! ;). If you experience getting stuck, you need to prepend it with the escape symbol `\`, such as here: `echo "Hello, Bash\!"`. This is an example that you need to be careful when working with command line: _holde tunga rett i munnen_. ;)
-
 
 ## Summary
 

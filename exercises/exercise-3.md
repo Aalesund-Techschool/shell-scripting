@@ -341,6 +341,18 @@ else
 fi
 ```
 
+:bulb: The syntax is very specific. You need to have space before and after the `[` and `]` symbols. The
+
+```bash
+if [ "$num" -gt 0 ]; then
+```
+
+is not the same as
+
+```bash
+if ["$num" -gt 0]; then
+```
+
 :pencil2: Write a bash script `arg_check.sh` that checks whether the script is executed with an argument. If it is, print `The argument is <argument>`. If it is not, print `No argument provided`.
 
 :pencil2: Write a bash script `args.sh` that takes two arguments and prints them in the following format: `You are executing the script with the following arguments: <first_argument> and  <second_argument>`. If one or both arguments are missing, print `You must provide two arguments for the script to work`.
@@ -373,7 +385,9 @@ hello Chuck
 hello John
 ```
 
-:bulb: Note: The `echo` command is used to return a value from a function. The value returned by the function is then available using the `$?` variable.
+:bulb: You can use the `$((...))` syntax to describe an arithmetic operation. For example `$((2 + 7))` would result to 9.
+
+:bulb: The `echo` command is used to return a value from a function. The value returned by the function is then available using the `$?` variable.
 
 ```bash
 function square() {
