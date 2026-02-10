@@ -236,7 +236,7 @@ You can do this in one line as well: `export MYVAR=1TEST123`.
 
 #### Git Bash in Windows
 
-:book: If you use Git Bash in Windows and haven't installed Windows Terminal, you may need set up key shortcuts yourself. Right click on the window title, choose Settings > Actions - see whether Copy, Paste and Cut commands include ctrl+shift+ variants of the command. IF these are lacking, scroll to top and choose "+ Add New" and define the necessary shortcut.
+:book: If you use Git Bash in Windows and haven't installed Windows Terminal, you may need set up key shortcuts yourself. Right click on the window title, choose Options > Keys, enable "Ctrl+Shift+letter shortcuts".
 
 :book: You can now use <kbd>Ctrl+Shift+C</kbd> for copy and <kbd>Ctrl+Shift+V</kbd> for paste.
 
